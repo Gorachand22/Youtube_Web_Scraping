@@ -1,0 +1,38 @@
+<!-- boilerplate code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Web Scraping Results</title>
+</head>
+<body style="background-color: rgb(192, 118, 8);">
+    {% if video_data.empty %}
+    <h3>No Results Found</h3>
+    {% else %}
+    <h3>Results:</h3>
+    <hr>
+    <table border="1" style="width:70%">
+        <thead>
+            <tr>
+                <th>Video URL</th>
+                <th>Thumbnail URL</th>
+                <th>Title</th>
+                <th>Views</th>
+                <th>Published Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for index, row in video_data.iterrows() %}
+            <tr>
+                <td>{{ row['Video_URL'] }}</td>
+                <td>{{ row['Thumbnails_URL'] }}</td>
+                <td>{{ row['Title'] }}</td>
+                <td>{{ row['Views'] }}</td>
+                <td>{{ row['Published_date'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</body>
+</html>

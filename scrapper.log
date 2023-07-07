@@ -1,0 +1,35 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 234-674-300
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2023 10:22:17] "[33mPOST /api_check HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'f:\\Study\\Tech_Skill\\Python\\Python_Project\\Youtube_Web_Scraping\\api_check.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 234-674-300
+INFO:werkzeug: * Detected change in 'f:\\Study\\Tech_Skill\\Python\\Python_Project\\Youtube_Web_Scraping\\api_check.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 234-674-300
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2023 10:24:38] "[33mPOST /api_check HTTP/1.1[0m" 404 -
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 777-363-266
+INFO:werkzeug: * Detected change in 'c:\\Users\\babul\\Downloads\\yt\\yt_scraping.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 777-363-266
+INFO:werkzeug: * Detected change in 'c:\\Users\\babul\\Downloads\\yt\\api_check.py', reloading
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 234-674-300
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2023 01:22:05] "GET / HTTP/1.1" 200 -
+INFO:googleapiclient.discovery_cache:file_cache is only supported with oauth2client<4.0.0
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2023 01:22:12] "POST /check_api HTTP/1.1" 200 -
+INFO:googleapiclient.discovery_cache:file_cache is only supported with oauth2client<4.0.0
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2023 01:22:51] "POST /perform_scraping HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2023 01:37:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2023 01:39:07] "GET / HTTP/1.1" 200 -

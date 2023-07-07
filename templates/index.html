@@ -1,0 +1,23 @@
+<!-- boilerplate code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Web Scraping</title>
+</head>
+<body style="background-color: #b2babb;">
+    <h1>YouTube</h1>
+    <h3>API || Channel ID</h3>
+    
+    <!-- jinja template -->
+    {% if message %}
+    <p style="color: crimson;">{{ message }}</p>
+    {% endif %}
+
+    <form action="/check_api" method="post">
+        <label>API Key</label><br>
+        <input type="text" name="user_ka_api" placeholder="e.g: AhnaStC_Kodcn3PiCpcpUtxJgsHNlwl-ovyFKVg4" size = "45" required><br>
+        <input type="submit" value="Check API">
+    </form>
+</body>
+</html>

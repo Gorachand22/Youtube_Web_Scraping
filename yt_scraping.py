@@ -67,9 +67,9 @@ class Scraping:
             video_data = pd.DataFrame(all_video_stats) # Convert all data to a DataFrame
             video_data['Views'] = pd.to_numeric(video_data['Views'])
             video_data['Published_date'] = pd.to_datetime(video_data['Published_date']).dt.date
-
-            video_data.to_csv('Video_Details({}).csv'.format(Channel_name)) # Make a csv file
+            
             return video_data
+        
         except Exception as e:
             logging.error(f"Scraping Error: {str(e)}")
             return pd.DataFrame()

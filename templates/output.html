@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>YouTube Web Scraping Results</title>
 </head>
-<body style="background-color: rgb(192, 118, 8);">
+<body style="background-color: rgb(8, 192, 146);">
     {% if video_data.empty %}
     <h3>No Results Found</h3>
     {% else %}
@@ -19,16 +19,22 @@
                 <th>Title</th>
                 <th>Views</th>
                 <th>Published Date</th>
+                <th>Likes</th>
+                <th>Dislikes</th>
+                <th>Comments</th>
             </tr>
         </thead>
         <tbody>
             {% for index, row in video_data.iterrows() %}
             <tr>
-                <td>{{ row['Video_URL'] }}</td>
-                <td>{{ row['Thumbnails_URL'] }}</td>
+                <td><a href="{{ row['Video_URL'] }}">{{ row['Video_URL'] }}</a></td>
+                <td><img src="{{ row['Thumbnails_URL'] }}"></td>
                 <td>{{ row['Title'] }}</td>
                 <td>{{ row['Views'] }}</td>
                 <td>{{ row['Published_date'] }}</td>
+                <td>{{ row['Likes'] }}</td>
+                <td>{{ row['Dislikes'] }}</td>
+                <td>{{ row['Comments'] }}</td>
             </tr>
             {% endfor %}
         </tbody>

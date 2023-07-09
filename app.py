@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
-# from flask_cors import CORS
-from flask_cors import cross_origin
+from flask_cors import CORS, cross_origin
 import logging
 from api_check import API
 from yt_scraping import Scraping
@@ -11,6 +10,9 @@ api = API()
 
 # Configure logging
 logging.basicConfig(filename='scrapper.log', level=logging.INFO)
+
+# Enable CORS for all routes
+CORS(app)
 
 @app.route('/')
 @cross_origin()
@@ -38,7 +40,10 @@ def perform_scraping():
     ID = request.form.get('channel_id')
     try:
         video_data = Scraping.channel_playlist_id(scarp_token, ID)
-        return render_template('output.html', video_data=video_data)
+        if video_data.empty:
+            return render_template('output.html', video_data=None, message="No Results Found")
+        else:
+            return render_template('output.html', video_data=video_data)
     except Exception as e:
         logging.error(f"Scraping Error: {str(e)}")
         return render_template('output.html', video_data=None, message="An error occurred during scraping. Please try again later.")

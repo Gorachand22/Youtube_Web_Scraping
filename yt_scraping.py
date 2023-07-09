@@ -75,7 +75,7 @@ class Scraping:
             video_data['Dislikes'] = pd.to_numeric(video_data['Dislikes'])
             video_data['Comments'] = pd.to_numeric(video_data['Comments'])
 
-            video_data.to_csv(f'Video_Details({Channel_name}).csv') # Make a CSV file
+            video_data.to_csv(f'Video_Details({Channel_name}).csv') # save a CSV file
             return video_data
         except Exception as e:
             logging.error(f"Scraping Error: {str(e)}")
